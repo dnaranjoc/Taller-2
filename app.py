@@ -20,6 +20,7 @@ app.config.suppress_callback_exceptions = True
 
 
 # Load data from csv
+#Cambios Maria Paula
 def load_data():
     # Función para cargar los datos de energia y transformarlos en DF .....
     df = pd.read_csv("datos_energia.csv")
@@ -40,10 +41,10 @@ def plot_series(data, initial_date, proy):
             x=data_plot.index,
             y=data_plot['AT_load_actual_entsoe_transparency'],
             mode='lines',
-            line=dict(color="#188463"),
+            line=dict(color="#188469"),
         ),
         go.Scatter(
-            name='Proyección',
+            name='Proyección de datos',
             x=data_plot.index,
             y=data_plot['forecast'],
             mode='lines',
